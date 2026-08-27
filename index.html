@@ -1,13 +1,113 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>我的个人主页</title>
+    }
+
+    article {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 720px);
+      padding: 64px 0;
+      border-top: 1px solid rgb(22 50 43 / 16%);
+      border-bottom: 1px solid rgb(22 50 43 / 16%);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    h1 {
+      margin: 24px 0 0;
+      color: #123d33;
+      font-size: clamp(48px, 10vw, 88px);
+      letter-spacing: -.055em;
+      line-height: .95;
+    }
+
+    .chinese-name {
+      margin: 14px 0 0;
+      color: var(--ink-soft);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .identity {
+      margin: 42px 0 0;
+      color: var(--ink-soft);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .identity p { margin: 0; }
+
+    .research {
+      margin-top: 42px;
+      padding-left: 20px;
+      border-left: 2px solid #b9dbb4;
+    }
+
+    .research h2 {
+      margin: 0;
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: .15em;
+    }
+
+    .research p:first-of-type {
+      margin: 12px 0 0;
+      color: #123d33;
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .research p:last-child {
+      margin: 12px 0 0;
+      color: #5d766e;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 46px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--green);
+      color: var(--green);
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .email:hover { color: #095443; }
+    .email:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
+    @media (max-width: 520px) {
+      article { padding: 48px 0; }
+      .identity { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>你好，我是你的名字</h1>
-  <p>这里是我的个人主页。</p>
-  <p>邮箱：beixun2026@gmail.com</p>
+  <main>
+    <article>
+      <p class="eyebrow">ACADEMIC HOMEPAGE</p>
+      <h1>Junjie He</h1>
+      <p class="chinese-name">何俊杰</p>
+
+      <div class="identity">
+        <p>Graduate student in Biomedical Engineering</p>
+        <p>Dalian University of Technology</p>
+      </div>
+
+      <section class="research" aria-labelledby="research-interest">
+        <h2 id="research-interest">RESEARCH INTEREST</h2>
+        <p>fMRI Temporal Super-Resolution</p>
+        <p>Research overview and updates will be added here soon.</p>
+      </section>
+
+      <a class="email" href="mailto:beixun2023@gmail.com">beixun2023@gmail.com</a>
+    </article>
+  </main>
 </body>
 </html>
